@@ -8,6 +8,9 @@
     <!-- This is the Boostrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">    
+
     <link rel="stylesheet" href="styles.css" />
     
 </head>
@@ -16,57 +19,74 @@
     <div class="container">
 
         <!-- Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+            
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-dans-meat-yogurt.svg" alt="Dan's Meat Yorgut Company Logo" width="150" height="auto">
+                </a>
+
+                
+                <!-- Dropdown menu-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end">
+                    <li class="nav-item dropdown btn btn-outline-light me-4" style="width: 150px">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flavors
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ham</a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#">Bacon</a></li>
+                            <li><a class="dropdown-item" href="#">Beef</a></li>
+                            <li><a class="dropdown-item" href="#">Fish</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+
+                    <li class="nav-item btn btn-outline-light" style="width: 150px">
+                        <a class="nav-link text-white" href="#">Contact</a>
                     </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                    
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
                 </div>
             </div>
         </nav>
 
         <!-- Jumbottron -->
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
+            <div class="row">
+                <div class="col-md-7 text-center text-md-left">
+                    <h1 class="display-3 text-white drop-shadow">Thick & Creamy</h1>
+                    <p class="lead">With real meat chunks</p>
+                    
+                    <a class="btn btn-outline-light btn-lg my-4 px-5 py-3 mb-5 mb-md-0" href="#" role="button">Pricing</a>
+                </div>
+                <div class="col-12 col-md-5">
+                    <img src="images/hero1.png" alt="Dan's Meat Yogurt" class="float-right img-fluid">
+                </div>
+            </div>
+        
+            
         </div>
 
+        <!-- Founder's Message -->
+        <div class="row">
+            <div class="col-12 col-md-4 "><img src="images/headshot-dan.jpg" alt="Daniel Scott - Meat Yogurt" class="img-fluid rounded-start">
+            </div>
+            <div class="col-12 col-md-8 bg-light rounded-end p-5 d-flex align-items-center">
+                <section>
+                    <h2>Message from our founder</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam voluptatem, eveniet incidunt nesciunt repudiandae deleniti. Consequatur dolore veniam officiis dignissimos. Dolores quisquam tempora quidem magni cumque eos cum minus debitis similique recusandae obcaecati, iusto veritatis aliquam deserunt, corrupti nesciunt natus dignissimos. Quidem rerum commodi velit impedit aliquam, accusantium voluptas blanditiis nobis. Explicabo soluta adipisci, pariatur doloremque dolorem accusantium dignissimos!</p>
+                </section>
+            </div>
+        </div>
 
         <!-- Carousel -->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <img src="images/yogurt-1.png" class="d-block w-100" alt="...">
@@ -78,25 +98,47 @@
                 <img src="images/yogurt-3.png" class="d-block w-100" alt="...">
                 </div>
             </div>
+
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </a>
+
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </a>
         </div>
 
-
-
-    </div>
-
-
-
-
-
-
+        <!-- Cards -->
+        <div class="card-group my-5">
+            <div class="card me-2 shadow" style="width: 18rem;">
+                <img class="card-img-top" src="images/product1.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn my-btn-blue stretched-link">Go somewhere</a>
+                </div>
+            </div>
+    
+            <div class="card me-2 ms-2 shadow" style="width: 18rem;">
+                <img class="card-img-top" src="images/product2.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn my-btn-blue stretched-link">Go somewhere</a>
+                </div>
+            </div>
+    
+            <div class="card ms-2 shadow" style="width: 18rem;">
+                <img class="card-img-top" src="images/product3.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn my-btn-blue stretched-link">Go somewhere</a>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -106,7 +148,5 @@
 
     <!-- This is the Boostrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 </html>
